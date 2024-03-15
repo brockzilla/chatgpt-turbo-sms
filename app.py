@@ -16,7 +16,7 @@ twilio_auth_token = os.environ["TWILIO_AUTH_TOKEN"]
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 @app.route("/sms", methods=["POST"])
-def sms_reply():
+async def sms_reply():
     user_msg = request.form.get("Body")
 
     # Call the OpenAI API
