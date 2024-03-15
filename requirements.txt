@@ -1,4 +1,6 @@
 Flask
 Twilio
 OpenAI
+async-openai
 ngrok
+dotenv
