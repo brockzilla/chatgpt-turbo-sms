@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 import openai
-import AsyncOpenAI
+from openai import AsyncOpenAI
 
 # Load environment variables from .env file
 load_dotenv()
