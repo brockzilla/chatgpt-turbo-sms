@@ -44,9 +44,11 @@ https://user-images.githubusercontent.com/63890666/225838063-f71c5a9b-fe22-4882-
     
 3.  Install the required packages:
     
-    `pip install -r requirements.txt` 
+    	`pip install -r requirements.txt
+
+    	pip install python-dotenv` 
     
-4.  Create a `.env` file in the project root directory and copy your Twilio Account SID, Auth Token, and OpenAI API Key:
+5.  Create a `.env` file in the project root directory and copy your Twilio Account SID, Auth Token, and OpenAI API Key:
     
 
 	    `TWILIO_ACCOUNT_SID=your_twilio_account_sid
