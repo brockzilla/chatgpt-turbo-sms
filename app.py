@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 import openai
+import AsyncOpenAI
 
 # Load environment variables from .env file
 load_dotenv()
@@ -19,7 +20,8 @@ def sms_reply():
     user_msg = request.form.get("Body")
 
     # Call the OpenAI API
-    response = openai.ChatCompletion.create(
+    client = AsyncOpenAI()
+    response = await client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
